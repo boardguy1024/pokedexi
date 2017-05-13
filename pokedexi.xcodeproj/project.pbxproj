@@ -19,6 +19,8 @@
 		A27E473A1EC6BCFB00C8EBC1 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A27E47391EC6BCFB00C8EBC1 /* bg.jpg */; };
 		A27E47401EC6C1E300C8EBC1 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E473F1EC6C1E300C8EBC1 /* PokeCell.swift */; };
 		A27E47421EC6D28A00C8EBC1 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E47411EC6D28A00C8EBC1 /* csv.swift */; };
+		A27E47441EC6DF7F00C8EBC1 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = A27E47431EC6DF7F00C8EBC1 /* music.png */; };
+		A27E47461EC6E0C400C8EBC1 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A27E47451EC6E0C400C8EBC1 /* music.mp3 */; };
 		BBA236220564698DA0484D57 /* Pods_pokedexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B034D2600EB5ECB8A8F5D11 /* Pods_pokedexiUITests.framework */; };
 		CE62E31A7997340223E92EAD /* Pods_pokedexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52406E98EEB4016A9F07EA1 /* Pods_pokedexi.framework */; };
 		D236ECAC3EA2EC6D37FCEAA7 /* Pods_pokedexiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7D41E596A77BBF1252A6D /* Pods_pokedexiTests.framework */; };
@@ -69,6 +71,8 @@
 		A27E473D1EC6BF8D00C8EBC1 /* Ketchum.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ketchum.otf; sourceTree = "<group>"; };
 		A27E473F1EC6C1E300C8EBC1 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		A27E47411EC6D28A00C8EBC1 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		A27E47431EC6DF7F00C8EBC1 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		A27E47451EC6E0C400C8EBC1 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		EA769501111DB080FF4A8759 /* Pods-pokedexiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokedexiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pokedexiTests/Pods-pokedexiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F52406E98EEB4016A9F07EA1 /* Pods_pokedexi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pokedexi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				A27E47051EC6AFCC00C8EBC1 /* pokedexi */,
-				A27E473B1EC6BF2400C8EBC1 /* supporting Files */,
+				A27E473B1EC6BF2400C8EBC1 /* Resources */,
 				A27E471A1EC6AFCC00C8EBC1 /* pokedexiTests */,
 				A27E47251EC6AFCC00C8EBC1 /* pokedexiUITests */,
 				A27E47041EC6AFCC00C8EBC1 /* Products */,
@@ -178,13 +182,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		A27E473B1EC6BF2400C8EBC1 /* supporting Files */ = {
+		A27E473B1EC6BF2400C8EBC1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A27E47451EC6E0C400C8EBC1 /* music.mp3 */,
+				A27E47431EC6DF7F00C8EBC1 /* music.png */,
 				A27E473C1EC6BF8D00C8EBC1 /* Ketchum Italic.otf */,
 				A27E473D1EC6BF8D00C8EBC1 /* Ketchum.otf */,
 			);
-			name = "supporting Files";
+			name = Resources;
 			path = pokedexi;
 			sourceTree = "<group>";
 		};
@@ -336,6 +342,8 @@
 				A27E470E1EC6AFCC00C8EBC1 /* Assets.xcassets in Resources */,
 				A27E47351EC6B5CE00C8EBC1 /* pokemon.csv in Resources */,
 				A27E470C1EC6AFCC00C8EBC1 /* Main.storyboard in Resources */,
+				A27E47461EC6E0C400C8EBC1 /* music.mp3 in Resources */,
+				A27E47441EC6DF7F00C8EBC1 /* music.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
