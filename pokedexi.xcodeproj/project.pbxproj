@@ -21,6 +21,7 @@
 		A27E47421EC6D28A00C8EBC1 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E47411EC6D28A00C8EBC1 /* csv.swift */; };
 		A27E47441EC6DF7F00C8EBC1 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = A27E47431EC6DF7F00C8EBC1 /* music.png */; };
 		A27E47461EC6E0C400C8EBC1 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A27E47451EC6E0C400C8EBC1 /* music.mp3 */; };
+		A27E47471EC7589000C8EBC1 /* Ketchum.otf in Resources */ = {isa = PBXBuildFile; fileRef = A27E473D1EC6BF8D00C8EBC1 /* Ketchum.otf */; };
 		BBA236220564698DA0484D57 /* Pods_pokedexiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B034D2600EB5ECB8A8F5D11 /* Pods_pokedexiUITests.framework */; };
 		CE62E31A7997340223E92EAD /* Pods_pokedexi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52406E98EEB4016A9F07EA1 /* Pods_pokedexi.framework */; };
 		D236ECAC3EA2EC6D37FCEAA7 /* Pods_pokedexiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7D41E596A77BBF1252A6D /* Pods_pokedexiTests.framework */; };
@@ -337,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A27E47471EC7589000C8EBC1 /* Ketchum.otf in Resources */,
 				A27E473A1EC6BCFB00C8EBC1 /* bg.jpg in Resources */,
 				A27E47111EC6AFCC00C8EBC1 /* LaunchScreen.storyboard in Resources */,
 				A27E470E1EC6AFCC00C8EBC1 /* Assets.xcassets in Resources */,

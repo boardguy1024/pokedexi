@@ -9,19 +9,21 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , UISearchBarDelegate{
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var musicPlayer: AVAudioPlayer!
     var pokemons = [Pokemon]()
+    var filteredPokemons = [Pokemon]()
+    var isSearchMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate =  self
         collectionView.dataSource =  self
-        let charmender = Pokemon(name: "ヒトカゲ", pokeId: 4)
-        
+        searchBar.delegate = self
         parsePokemonCSV()
         PlayBackGroundMusic()
     }
@@ -73,11 +75,41 @@ class ViewController: UIViewController , UICollectionViewDelegate , UICollection
         }
     }
     
+    
+    //MARK:- SearchBar Protocol Methods
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        collectionView.reloadData()
+        //searchBarに文字がない場合にはsearchモードをfalse
+        if searchBar.text == nil || searchBar.text == "" {
+            isSearchMode = false
+        } else {
+            isSearchMode = true
+            
+            //取得した文字を小文字に変更
+            let lowerText = searchBar.text!.lowercased()
+            
+            filteredPokemons = pokemons.filter({ $0.name.contains(lowerText)})
+        }
+        //filteringされたインスタンスを表示させるため、collectionViewを再配置する
+        collectionView.reloadData()
+    }
+    
+    
+    
+    //MARK:- CollectionView Protocol Methods
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? PokeCell {
             
-            cell.configureCell(pokemon: pokemons[indexPath.row])
+            let poke: Pokemon!
+            
+            //searchMode時はfliteredPokemonで表示
+            if isSearchMode {
+                poke = filteredPokemons[indexPath.row]
+                cell.configureCell(pokemon: poke)
+            } else {
+                //全てのpokemonを表示
+                cell.configureCell(pokemon: pokemons[indexPath.row])
+            }
             return cell
             
         } else {
@@ -87,11 +119,14 @@ class ViewController: UIViewController , UICollectionViewDelegate , UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        // seeachMode時はfilterdPokemonのカウントを返す
+        if isSearchMode {
+            return filteredPokemons.count
+        }
         return pokemons.count
     }
     
