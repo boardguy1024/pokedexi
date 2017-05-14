@@ -24,6 +24,7 @@ class ViewController: UIViewController , UICollectionViewDelegate , UICollection
         collectionView.delegate =  self
         collectionView.dataSource =  self
         searchBar.delegate = self
+        searchBar.returnKeyType = .done
         parsePokemonCSV()
         PlayBackGroundMusic()
     }
@@ -75,13 +76,17 @@ class ViewController: UIViewController , UICollectionViewDelegate , UICollection
         }
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
     
     //MARK:- SearchBar Protocol Methods
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        collectionView.reloadData()
+
         //searchBarに文字がない場合にはsearchモードをfalse
         if searchBar.text == nil || searchBar.text == "" {
             isSearchMode = false
+            view.endEditing(true)
         } else {
             isSearchMode = true
             
